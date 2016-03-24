@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PokemonViewController.h
 //  Pokedex
 //
 //  Created by Nathan Johnson on 3/18/16.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PokemonRef.h"
 
-@interface ViewController : UIViewController
+@interface PokemonViewController : UIViewController
 
+@property (nonatomic) PokemonRef *pokemonRef;
 
 @end
-
