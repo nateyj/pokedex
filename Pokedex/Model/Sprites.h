@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// V2
 @interface Sprites : NSObject
 
 @property (nonatomic) NSString *backDefault;

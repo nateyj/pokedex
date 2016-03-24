@@ -11,7 +11,8 @@
 @interface PokemonRef : NSObject
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *url;
+//@property (nonatomic) NSString *url;    //V2
+@property (nonatomic) NSString *resourceURI;
 
 + (PokemonRef *) initWithDict:(NSDictionary *)dict;
 

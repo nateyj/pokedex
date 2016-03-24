@@ -14,7 +14,8 @@
     TypeRef *typeRef = [[TypeRef alloc] init];
     
     typeRef.name = dict[@"name"];
-    typeRef.url = dict[@"url"];
+//    typeRef.url = dict[@"url"]; //V2
+    typeRef.resourceURI = dict[@"resource_uri"];    // begins with / (e.g. "/api/v1/type/1/")
     
     return typeRef;
 }

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Pokemon.h"
 #import "PokemonRef.h"
+#import "Sprite.h"
 
 // ensures that PokemonClient is in fact a class, since it is referenced in PokemonClientDelegate (chicken and egg; i.e., one has to be declared first since
 // both rely on each other to exist)
@@ -22,6 +23,8 @@
 - (void) client:(PokemonClient *)client getPokemonListFailedWithError:(NSError *)error andMessage:(NSString *)message;
 - (void) client:(PokemonClient *)client getPokemonWithURL:(NSString *)url succeeded:(Pokemon *)pokemon;
 - (void) client:(PokemonClient *)client getPokemonWithURL:(NSString *)url failedWithError:(NSError *)error andMessage:(NSString *)message;
+- (void) client:(PokemonClient *)client getPokemonSpriteWithURL:(NSString *)url succeeded:(Sprite *)sprite;
+- (void) client:(PokemonClient *)client getPokemonSpriteWithURL:(NSString *)url failedWithError:(NSError *)error andMessage:(NSString *)message;
 
 @end
 
@@ -32,5 +35,6 @@
 
 - (void)getPokemonList;
 - (void)getPokemonWithURL:(NSString *)urlStr;
+- (void)getPokemonSpriteWithURL:(NSString *)urlStr;
 
 @end

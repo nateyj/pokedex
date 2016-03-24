@@ -13,7 +13,8 @@
 + (PokemonRef *) initWithDict:(NSDictionary *)dict {
     PokemonRef *pokemon = [[PokemonRef alloc] init];
     pokemon.name = dict[@"name"];
-    pokemon.url = dict[@"url"];
+//    pokemon.url = dict[@"url"];   //V2
+    pokemon.resourceURI = dict[@"resource_uri"];    // e.g. "api/v1/pokemon/1/"
     
     return pokemon;
 }

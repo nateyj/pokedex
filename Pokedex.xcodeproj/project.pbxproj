@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311657A71CA4726000D395F9 /* SpriteRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 311657A61CA4726000D395F9 /* SpriteRef.m */; };
+		311657AA1CA47A1100D395F9 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 311657A91CA47A1100D395F9 /* Sprite.m */; };
 		313B11E71C9C468F000F9816 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B11E61C9C468F000F9816 /* main.m */; };
 		313B11EA1C9C468F000F9816 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B11E91C9C468F000F9816 /* AppDelegate.m */; };
 		313B11F01C9C468F000F9816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 313B11EE1C9C468F000F9816 /* Main.storyboard */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		311657A51CA4726000D395F9 /* SpriteRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpriteRef.h; path = Model/SpriteRef.h; sourceTree = "<group>"; };
+		311657A61CA4726000D395F9 /* SpriteRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpriteRef.m; path = Model/SpriteRef.m; sourceTree = "<group>"; };
+		311657A81CA47A1100D395F9 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		311657A91CA47A1100D395F9 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
 		313B11E21C9C468F000F9816 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		313B11E61C9C468F000F9816 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		313B11E81C9C468F000F9816 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +123,10 @@
 				31C520121CA1F70700914E33 /* TypeRef.m */,
 				31C520141CA1F8F800914E33 /* Sprites.h */,
 				31C520151CA1F8F800914E33 /* Sprites.m */,
+				311657A51CA4726000D395F9 /* SpriteRef.h */,
+				311657A61CA4726000D395F9 /* SpriteRef.m */,
+				311657A81CA47A1100D395F9 /* Sprite.h */,
+				311657A91CA47A1100D395F9 /* Sprite.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,8 +225,10 @@
 			files = (
 				31E979071C9CBF7100876BCB /* PokemonViewController.m in Sources */,
 				313B12051C9C4787000F9816 /* PokemonListViewController.m in Sources */,
+				311657AA1CA47A1100D395F9 /* Sprite.m in Sources */,
 				31E978FB1C9C4FFB00876BCB /* PokemonRef.m in Sources */,
 				313B11EA1C9C468F000F9816 /* AppDelegate.m in Sources */,
+				311657A71CA4726000D395F9 /* SpriteRef.m in Sources */,
 				31C520161CA1F8F800914E33 /* Sprites.m in Sources */,
 				31C520101CA1F45100914E33 /* TypeOrder.m in Sources */,
 				31E979021C9C777D00876BCB /* PokemonClient.m in Sources */,

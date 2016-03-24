@@ -73,17 +73,7 @@
 }
 
 
-// MARK: Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showPokemon"]) {
-        PokemonViewController *vc = segue.destinationViewController;
-
-        int row = (int)[self.tableView indexPathForCell:sender].row;
-        vc.pokemonRef = self.pokemon[row];
-    }
-}
-
+// MARK: Pokemon client delegate
 
 - (void)client:(PokemonClient *)client getPokemonListSucceeded:(NSArray *)pokemon {
     [self.activityIndicator stopAnimating];
@@ -97,6 +87,18 @@
     
     NSLog(@"%@", error);
     NSLog(@"%@", message);
+}
+
+
+// MARK: Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showPokemon"]) {
+        PokemonViewController *vc = segue.destinationViewController;
+
+        int row = (int)[self.tableView indexPathForCell:sender].row;
+        vc.pokemonRef = self.pokemon[row];
+    }
 }
 
 @end

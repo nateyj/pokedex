@@ -7,26 +7,49 @@
 //
 
 #import "Pokemon.h"
-#import "TypeOrder.h"
+//#import "TypeOrder.h"   //V2
+#import "SpriteRef.h"
+#import "TypeRef.h"
 
 @implementation Pokemon
 
 + (Pokemon *) initWithDict:(NSDictionary *)dict {
     Pokemon *pokemon = [[Pokemon alloc] init];
     
-    pokemon.id = dict[@"id"];
+    // V2
+//    pokemon.id = dict[@"id"];
+//    pokemon.name = dict[@"name"];
+//    pokemon.height = [dict[@"height"] intValue];
+//    pokemon.weight = [dict[@"weight"] intValue];
+//    pokemon.sprites = [Sprites initWithDict:dict[@"sprites"]];
+//    
+//    NSMutableArray *typeOrderArray;
+//    
+//    for (NSDictionary *typeOrderDict in dict[@"types"]) {
+//        [typeOrderArray addObject:[TypeOrder initWithDict:typeOrderDict]];
+//    }
+//    
+//    pokemon.typeOrders = typeOrderArray;
+    
+    pokemon.id = dict[@"national_id"];
     pokemon.name = dict[@"name"];
-    pokemon.height = [dict[@"height"] intValue];
-    pokemon.weight = [dict[@"weight"] intValue];
-    pokemon.sprites = [Sprites initWithDict:dict[@"sprites"]];
+    pokemon.height = dict[@"height"];
+    pokemon.weight = dict[@"weight"];
     
-    NSMutableArray *typeOrderArray;
+    NSMutableArray *sprites = [[NSMutableArray alloc] init];
     
-    for (NSDictionary *typeOrderDict in dict[@"types"]) {
-        [typeOrderArray addObject:[TypeOrder initWithDict:typeOrderDict]];
+    for (NSDictionary *sprite in dict[@"sprites"]) {
+        [sprites addObject:[SpriteRef initWithDict:sprite]];
     }
     
-    pokemon.typeOrders = typeOrderArray;
+    NSMutableArray *types = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *type in dict[@"types"]) {
+        [types addObject:[TypeRef initWithDict:type]];
+    }
+    
+    pokemon.sprites = sprites;
+    pokemon.types = types;
     
     return pokemon;
 }
